@@ -10,6 +10,6 @@
 * v1.1.1 [2019-11-24] Bug fix
     Added missing closing bracket in players.py:50
   
-* v1.1.1 [2019-11-24] Bug fix
+* v1.1.2 [2019-11-24] Bug fix
     Added instantiation of switch object to make the game start
     
