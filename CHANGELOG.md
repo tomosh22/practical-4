@@ -1,5 +1,10 @@
 # CHANGELOG
 
+* v1.1.10 [2019-11-24] Bug fix
+    Switch.run_player was not returning True after skipping a player because of skip flag
+    and equality operator (==) was being used instead of assignment operator (=) to change
+    flags back to False
+
 * v1.1.9 [2019-11-24] Bug fix
     When Switch.get_normalized_hand_sizes() attempts to rotate sizes it doesn't do anything.
     Flipped around sizes[idx:] and sizes[:idx] so sizes is rotated properly
