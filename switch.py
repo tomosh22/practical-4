@@ -3,7 +3,6 @@ import random
 
 from cards import generate_deck
 
-
 MAX_PLAYERS = 4
 HAND_SIZE = 7
 
@@ -27,6 +26,7 @@ class Switch:
     self.draw4 -- bool indicating that the next player must draw 4 cards
     self.direction -- int, either 1 or -1 indicating direction of play.
     """
+
     def run_game(self):
         """Run rounds of the game until player decides to exist."""
         UI.say_welcome()
@@ -52,7 +52,7 @@ class Switch:
         # deal cards etc.
         self.setup_round()
 
-        i = 0 # current player index
+        i = 0  # current player index
         while True:
             # process current player's turn 
             won = self.run_player(self.players[i])
@@ -60,7 +60,7 @@ class Switch:
                 break
             else:
                 # advance player index depending on self.direction
-                i = i+self.direction % len(self.players)
+                i = i + self.direction % len(self.players)
         UI.print_winner_of_game(self.players[i])
 
     def setup_round(self):
@@ -162,7 +162,7 @@ class Switch:
                 # add back discarded cards (but not top card)
                 if len(self.discards) == 1:
                     UI.print_message("All cards distributed")
-                    return i-1
+                    return i - 1
                 self.stock = self.discards[:-1]
                 del self.discards[:-1]
                 # shuffle stock
@@ -270,3 +270,6 @@ class Switch:
         UI.print_message('{} swaps hands with {}.'.format(p1.name, p2.name))
 
 
+if __name__ == "__main__":
+    game = Switch()
+    game.run_game()
