@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* v1.1.5 [2019-11-24] Bug fix
+    Switch.can_discard() line 185 states that both the suit and value must
+    match, instead of just one of them. Changed and to or
+    
 * v1.1.4 [2019-11-24] Bug fix
     cards.py line 6 there are 2 aces generated for each suit
     so removed one of them
