@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* v1.1.7 [2019-11-24] Bug fix
+    Switch.discard_card() sets draw2 to True when a 4 is played instead of when
+    2 is played, changed to 2
+    
 * v1.1.6 [2019-11-24] Test fix
     test_can_discard_allows_ace() attempts to play a king not an ace, changed
     this to an ace instead
