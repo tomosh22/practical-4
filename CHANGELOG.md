@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* v1.1.4 [2019-11-24] Bug fix
+    cards.py line 6 there are 2 aces generated for each suit
+    so removed one of them
+    
 * v1.1.3 [2019-11-24] Bug fix
     Switch.pick_up_card() range(1,n) on line 159 doesn't compensate
     for the fact that range() doesnt include the last number so
