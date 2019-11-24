@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* v1.1.6 [2019-11-24] Test fix
+    test_can_discard_allows_ace() attempts to play a king not an ace, changed
+    this to an ace instead
+    
 * v1.1.5 [2019-11-24] Bug fix
     Switch.can_discard() line 185 states that both the suit and value must
     match, instead of just one of them. Changed and to or
