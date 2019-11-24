@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* v1.1.8 [2019-11-24] Bug fix
+    Switch.discard_card() multiplies Switch.direction by 1 when it tries to change
+    direction after discarding a king, which doesnt do anything. Changed to multiplying by -1
+    
 * v1.1.7 [2019-11-24] Bug fix
     Switch.discard_card() sets draw2 to True when a 4 is played instead of when
     2 is played, changed to 2
