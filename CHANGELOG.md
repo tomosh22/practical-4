@@ -1,5 +1,12 @@
 # CHANGELOG
 
+* v1.1.12 [2019-11-25] Bug fix and test fix
+    Switch.run_player() line 125 was not passing card into Switch.can_discard(), which resulted
+    in Switch.cam_discard() returning True every time it was called.
+    Also realised that test_run_player__adheres_to_draw2_flag() and
+    test_run_player__adheres_to_draw4_flag() didn't actually have to compensate for the
+    player discarding after drawing as none of the cards drawn from stock were discardable
+
 * v1.1.11 [2019-11-25] Test fix
     test_run_player__adheres_to_draw2_flag() and test_run_player__adheres_to_draw4_flag()
     weren't compensating for the fact that after a player draws the 2/4 cards, they then

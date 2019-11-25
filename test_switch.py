@@ -175,7 +175,7 @@ def test_run_player__adheres_to_draw2_flag():
     player = s.players[1]
     len_before = len(player.hand)
     s.run_player(player)
-    assert len(player.hand) - len_before == 1
+    assert len(player.hand) - len_before == 2
     assert not s.draw2
 
 
@@ -185,7 +185,7 @@ def test_run_player__adheres_to_draw4_flag():
     player = s.players[1]
     len_before = len(player.hand)
     s.run_player(player)
-    assert len(player.hand) - len_before == 3
+    assert len(player.hand) - len_before == 4
     assert not s.draw4
 
 
