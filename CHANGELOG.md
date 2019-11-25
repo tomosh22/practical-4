@@ -1,5 +1,12 @@
 # CHANGELOG
 
+* v1.1.11 [2019-11-24] Test fix
+    test_run_player__adheres_to_draw2_flag() and test_run_player__adheres_to_draw4_flag()
+    weren't compensating for the fact that after a player draws the 2/4 cards, they then
+    have to discard one to complete their turn. Also they were asserting that the length
+    of the player's hand was 2/4, rather than the difference in length between before their
+    turn and after
+
 * v1.1.10 [2019-11-24] Bug fix
     Switch.run_player was not returning True after skipping a player because of skip flag
     and equality operator (==) was being used instead of assignment operator (=) to change
