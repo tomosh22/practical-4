@@ -1,5 +1,11 @@
 # CHANGELOG
 
+* v1.1.13 [2019-12-02] Bug fix
+    Switch.run_round was not changing the current player correctly after calling Switch.run_player,
+    if after adding Switch.direction to i the value of i ends up being outside the bounds
+    of Switch.players[] there is no code to remedy this. Added code to change i in edge cases so
+    that it loops back to the other end of Switch.players[]
+    
 * v1.1.12 [2019-11-25] Bug fix and test fix
     Switch.run_player() line 125 was not passing card into Switch.can_discard(), which resulted
     in Switch.cam_discard() returning True every time it was called.
